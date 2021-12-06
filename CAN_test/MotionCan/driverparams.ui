@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DriverParams</class>
+ <widget class="QWidget" name="DriverParams">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>671</width>
+    <height>472</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resonrces.qrc">
+    <normaloff>:/images/app.ico</normaloff>:/images/app.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	color:#fff;
+	/*background-color: rgb(240,240,240);*/
+	background-color: rgb(24,28,40);
+}
+QLabel{
+	background-color: rgb(41,45,57);
+}
+
+QPushButton{
+	color:white;
+	border:2px solid #147e3a;
+	background-color:#019b48;
+	width:50px;
+	height:30px;
+}
+
+QPushButton:hover{
+	background-color:#019b48;
+	font-size:12px;
+	font-weight:bold;
+}
+
+QLabel{
+	color:white;
+}
+
+QGroupBox{
+	border:2px solid rgb(41,45,57);
+	color:white;
+	background-color: rgb(41,45,57);
+	border-radius:4px;
+}
+
+QLineEdit{	
+	background-color: rgb(255, 255, 255);
+	border:1px solid #147e3a;
+	width:100px;
+	height:30px;
+	color:black;
+}
+QComboBox{
+	background-color: rgb(255, 255, 255);
+	width:100px;
+	height:27px;
+	border-radius:4px;
+	border:1px solid rgb(41,45,57);
+	color:black;
+}
+
+QLineEdit:hover{
+	border:1px solid rgb(0,149,255);
+}
+
+QTabWidget:pane{
+	border-top:1px solid rgb(240, 240, 240);
+	/*border:1px solid rgb(41,45,57);*/
+}
+
+QTabBar::tab{
+	color:white;
+	width:50px;
+	height:25px;
+	background-color:#019b48;
+	margin-right: 5px;
+	margin-bottom:-6px;
+}
+
+QTabBar::tab:selected{
+	background-color:rgb(0,149,255);
+	font-weight:bold;
+	height:28px;
+	border:1.5px solid rgb(0,110,255);
+}
+
+QMessageBox{
+	background-color:rgb(41,45,57);
+}
+
+QMessageBox QPushButton:enabled{
+	border-radius: 5px;
+	width: 50px;
+	height: 20px;
+	background-color: #019b48;
+	color: white;
+	font-size: 12px;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="4,2,1">
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="positionLoopGroupBox_3">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_20" stretch="1,4">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>应用参数</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_11">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gridGroupBox_8">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+	border:1px solid rgb(41,45,57);
+	height:25px;
+	width:100px;
+	border-radius:5px;
+}
+QLineEdit:hover{
+	border:1px solid rgb(0,149,255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9" rowstretch="1,1,1,1,1" columnstretch="2,4,2,2,4,2" columnminimumwidth="1,1,1,1,1,1">
+            <property name="leftMargin">
+             <number>20</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>17</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>5</number>
+            </property>
+            <item row="4" column="4">
+             <widget class="QComboBox" name="motorDirectionCombpBox">
+              <item>
+               <property name="text">
+                <string>与当前正方向相同</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>与当前正方向相反</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>RPM</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>停止减速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="4">
+             <widget class="QLineEdit" name="AppminPositionLineEdit"/>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="label_30">
+              <property name="text">
+               <string>堵转电流</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="initialPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>加速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="AppmaxSpeedLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>最大速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>A</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="AppmaxPositionLineEdit"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="5">
+             <widget class="QLabel" name="label_32">
+              <property name="text">
+               <string>P/S^2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>初始位置</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>额定电流</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>P/S^2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLineEdit" name="AppstopDecelerationLineEdit"/>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLineEdit" name="AppstallCurrenLineEdit"/>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>减速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>最大位置</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="4">
+             <widget class="QLineEdit" name="AppdeceleratitionLineEdit"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_25">
+              <property name="text">
+               <string>度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="AppaccelerationLineEdit"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="AppratedCurrentLineEdit"/>
+            </item>
+            <item row="4" column="3">
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>电机正方向</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>P/S^2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="5">
+             <widget class="QLabel" name="label_33">
+              <property name="text">
+               <string>度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>最小位置</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>A</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="5">
+             <widget class="QCheckBox" name="currentlyCheckBox">
+              <property name="text">
+               <string>当前</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QGroupBox" name="positionLoopGroupBox_4">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_22" stretch="1,4">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <item>
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>静态参数</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_12">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gridGroupBox_9">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+	border:1px solid rgb(41,45,57);
+	height:25px;
+	width:100px;
+	border-radius:5px;
+}
+QLineEdit:hover{
+	border:1px solid rgb(0,149,255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_10" columnstretch="2,2,1,2,2,1" columnminimumwidth="0,0,0,0,0,0">
+            <property name="leftMargin">
+             <number>11</number>
+            </property>
+            <property name="topMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>15</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>4</number>
+            </property>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>A</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>RPM</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>驱动器输入最小电压</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>驱动器输入最大电压</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="label_31">
+              <property name="text">
+               <string>驱动器输出堵转电流</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="4">
+             <widget class="QLineEdit" name="driverMinVoltage">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>驱动器输出最大速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>驱动器输出额定电流</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>驱动器输出最小速度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="driverMaxVelocity">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLineEdit" name="driverStallCurrent">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="driverRatedCurrent">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLineEdit" name="DriverMinVelocity">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="driverMaxVoltage">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>V</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>A</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>RPM</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="5">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>V</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1">
+      <item>
+       <widget class="QGroupBox" name="positionLoopGroupBox_5">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="backBtn">
+           <property name="text">
+            <string>上一步</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="nextBtn">
+           <property name="text">
+            <string>下一步</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancelBtn">
+           <property name="text">
+            <string>取消</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resonrces.qrc"/>
+ </resources>
+ <connections/>
+</ui>

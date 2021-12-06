@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/OFF.bmp</file>
+        <file>images/ON.bmp</file>
+        <file>images/logo.png</file>
+        <file>images/background.jpg</file>
+        <file>images/app.ico</file>
+        <file>images/info2.png</file>
+        <file>images/run.png</file>
+        <file>images/setting.png</file>
+        <file>images/run2.png</file>
+        <file>images/setting2.png</file>
+        <file>images/file.png</file>
+        <file>images/clear.png</file>
+    </qresource>
+</RCC>

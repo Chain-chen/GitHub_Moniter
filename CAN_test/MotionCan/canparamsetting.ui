@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CANParamSetting</class>
+ <widget class="QDialog" name="CANParamSetting">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>317</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>317</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CAN参数设置</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resonrces.qrc">
+    <normaloff>:/images/app.ico</normaloff>:/images/app.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	color:#000;
+	background-color: rgb(41,45,57);
+}
+
+QPushButton{
+	height:25px;
+	color:white;
+	border:2px solid #147e3a;
+	background-color:#019b48;
+	border-radius:5px;
+}
+
+QPushButton:hover{
+	background-color:#019b48;
+	font-size:12px;
+	font-weight:bold;
+}
+
+QLabel{
+	color:white;
+}
+
+QGroupBox{
+	border:2px solid rgb(41,45,57);
+	color:black;
+}
+
+QComboBox{
+	height:20px;
+	border:1px solid rbg(41,45,57)
+}
+
+QMessageBox{
+	background-color:rgb(41,45,57);
+}
+
+QMessageBox QPushButton:enabled{
+	border-radius: 5px;
+	width: 50px;
+	height: 20px;
+	background-color: #019b48;
+	color: white;
+	font-size: 12px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="3,1,2,4,2,2">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetMinimumSize</enum>
+   </property>
+   <property name="leftMargin">
+    <number>30</number>
+   </property>
+   <property name="rightMargin">
+    <number>30</number>
+   </property>
+   <property name="horizontalSpacing">
+    <number>30</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>1</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_5">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font: 11pt &quot;宋体&quot;;</string>
+     </property>
+     <property name="text">
+      <string>CAN设备参数设置</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>设备类型</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>设备索引</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QComboBox" name="CANType">
+     <item>
+      <property name="text">
+       <string>CANalyst-II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USBCAN-I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USBCAN-II</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USBCAN-2A</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USBCAN-2C</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="CANIndex">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>波特率</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>CAN通道</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QComboBox" name="CANBaundRate">
+     <property name="currentIndex">
+      <number>13</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>10Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>20Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>40Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>50Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>80Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>100Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>125Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>200Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>250Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>400Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>500Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>666Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>800Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1000Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>33.33Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>66.66Kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>83.33Kbps</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="CANCom">
+     <item>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="saveBtn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>确定</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="quitBtn">
+     <property name="text">
+      <string>退出</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resonrces.qrc"/>
+ </resources>
+ <connections/>
+</ui>
